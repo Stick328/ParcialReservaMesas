@@ -1,0 +1,26 @@
+:root{--bg:#faf6f1;--ink:#2b2118;--main:#b5441f;--soft:#f3dccf;--line:#e4d8cc}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+header{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:space-between;align-items:center;padding:1rem;background:var(--main);color:#fff}
+h1{font-size:1.25rem;margin:0}h2{font-size:1.1rem;margin:0 0 .75rem}
+main{display:grid;gap:1rem;padding:1rem;max-width:1100px;margin:auto}
+@media(min-width:800px){main{grid-template-columns:1fr 1fr}main>:last-child{grid-column:1/-1}}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem}
+label{display:block;font-size:.9rem;margin-bottom:.6rem}
+input,select{width:100%;padding:.6rem;margin-top:.25rem;border:1px solid var(--line);border-radius:8px;font:inherit}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+button{font:inherit;cursor:pointer;border:0;border-radius:8px;padding:.6rem 1rem;background:var(--main);color:#fff;min-height:44px}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #1d6fd1;outline-offset:2px}
+.toggle button{background:transparent;border:1px solid #fff}.toggle .on{background:#fff;color:var(--main)}
+.cal-head{display:flex;justify-content:space-between;align-items:center}.cal-head h2{margin:0;text-transform:capitalize}
+.cal-head button{padding:.3rem .8rem}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:.5rem;text-align:center}
+.dow{font-size:.8rem}
+.day{background:#fff;color:var(--ink);border:1px solid var(--line);padding:.3rem 0;min-height:48px;display:flex;flex-direction:column;align-items:center}
+.day small{font-size:.7rem}.day.mid{background:var(--soft)}.day.high{background:#e9967a}
+.day.sel{outline:3px solid var(--ink)}
+.legend{font-size:.8rem}.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin:0 4px 0 10px}
+.legend i.mid{background:var(--soft)}.legend i.high{background:#e9967a}
+.list{list-style:none;padding:0;margin:0}.list li{display:flex;justify-content:space-between;gap:.5rem;align-items:center;padding:.6rem 0;border-bottom:1px solid var(--line)}
+.danger{background:#fff;color:#a11;border:1px solid #a11}
+.ok{color:#176a2d}.err{color:#a11}
